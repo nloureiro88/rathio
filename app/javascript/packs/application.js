@@ -27,17 +27,12 @@ require("channels")
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
 
-// loads the Icon plugin
-
-
-// components can be called from the imported UIkit reference
-UIkit.notification('Hello world.');
-
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  UIkit.use(Icons);
+  // UIkit.notification('Hello world.');
+  UIkit.use(Icons); // loads the Icon plugin
 });
