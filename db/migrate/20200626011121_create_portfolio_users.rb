@@ -3,7 +3,7 @@ class CreatePortfolioUsers < ActiveRecord::Migration[6.0]
     create_table :portfolio_users do |t|
       t.references :portfolio, null: false, foreign_key: true
       t.references :user, null: false, foreign_key: true
-      t.integer :inviter
+      t.integer :inviter_id
       t.string :role
       t.string :status, default: "active"
 

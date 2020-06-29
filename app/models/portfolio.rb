@@ -2,6 +2,9 @@ class Portfolio < ApplicationRecord
   has_many :portfolio_users, dependent: :destroy
   has_many :users, through: :portfolio_users
 
+  has_many :portfolio_projects, dependent: :destroy
+  has_many :projects, through: :portfolio_projects
+
   scope :active, -> { where(status: 'active') }
 
   ### STATUS MANAGEMENT
