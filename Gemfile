@@ -21,21 +21,43 @@ gem 'jbuilder', '~> 2.7'
 gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# OTHER GEMS
 gem 'devise'
-
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
 # MY GEMS
-gem 'acts_as_list'
+
+### Asset management
+# gem 'cloudinary'
+# gem 'carrierwave'
+
+### Autentication and authorization
+gem 'pundit' # Added to allow for authorization management
+gem 'pg_search' # Added to allow custom serching
+
+### Front-end / JS libraries
+gem 'jquery-rails' # Added to support j-query
+gem 'rails-sweetalert2-confirm' # Added to provide nice alerts
+gem "non-stupid-digest-assets" # Added to prevent image compliation issues
+# gem 'sassc-rails'
+# gem 'uglifier'
+# gem 'country_select'
+# gem 'will_paginate'
+
+### Integration and jobs
+# gem 'nokogiri'
+# gem 'httparty'
+# gem 'postmark-rails'
+# gem "serviceworker-rails"
+# gem 'sidekiq'
+# gem 'sidekiq-failures', '~> 1.0'
 
 group :development, :test do
   gem 'pry-byebug'
@@ -43,10 +65,11 @@ group :development, :test do
   gem 'dotenv-rails'
 
   # MY GEMS
-  gem 'faker' # Added to support seeds
-
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw] # Added to support debug
+  gem 'faker' # Added to support seed generation
+  gem 'bullet' # Added to identify N+1 situations
+  gem 'rack-mini-profiler' # Added to check query performance
+  gem 'letter_opener' # Added to support mailer development
 end
 
 group :development do
