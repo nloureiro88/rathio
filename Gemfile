@@ -46,6 +46,8 @@ gem 'pg_search' # Added to allow custom serching
 gem 'jquery-rails' # Added to support j-query
 gem 'rails-sweetalert2-confirm' # Added to provide nice alerts
 gem "non-stupid-digest-assets" # Added to prevent image compliation issues
+gem 'select2-rails' # Added to improve select forms
+
 # gem 'sassc-rails'
 # gem 'uglifier'
 # gem 'country_select'

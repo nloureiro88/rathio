@@ -1,13 +1,13 @@
-// Graphical variables
-@import "config/fonts";
-@import "config/colors";
-@import "config/bootstrap_variables";
+// 1. Your custom variables and variable overwrites.
+@import "components/index.scss";
+@import "pages/index.scss";
 
-// External libraries
-@import "bootstrap/scss/bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+// 2. Import default variables and available mixins.
+@import "uikit/src/scss/variables.scss";
+@import "uikit/src/scss/mixins.scss";
 
-// Your CSS partials
-@import "components/index";
-@import "pages/index";
+// 3. Your custom mixin overwrites.
+// @import "theme/accordion-mixins.scss";
+
+// 4. Import UIkit
+@import "uikit/src/scss/uikit.scss";
